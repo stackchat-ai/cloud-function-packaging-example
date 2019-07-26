@@ -1,0 +1,43 @@
+{
+  "name": "cloud-function-packaging-example",
+  "version": "1.0.0",
+  "description": "Stackchat cloud function example",
+  "main": "cloud-functions.js",
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true,
+  "dependencies": {
+    "@stackchat/dynamic-content-toolkit": "0.0.9",
+    "request-promise": "4.2.4"
+  },
+  "devDependencies": {
+    "@types/expect": "1.20.4",
+    "@types/jest": "24.0.15",
+    "@types/node": "8.10.47",
+    "@types/request-promise": "4.1.44",
+    "jest": "24.8.0",
+    "ts-jest": "24.0.2",
+    "ts-loader": "5.3.3",
+    "tslint": "5.18.0",
+    "typescript": "3.5.3",
+    "webpack": "4.37.0",
+    "webpack-cli": "3.3.6"
+  },
+  "scripts": {
+    "build": "webpack",
+    "clean": "rm -rf build dist",
+    "lint": "tslint -t stylish --project tsconfig.json",
+    "test": "jest"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testMatch": [
+      "**/__tests__/*.spec.(js|ts)"
+    ]
+  }
+}
