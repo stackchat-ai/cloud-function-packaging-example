@@ -11,7 +11,7 @@ describe("example cloud function", () => {
     // @ts-ignore -- even with the typecasting chicanery above this didn't want a value argument
     mockedRP.mockResolvedValue(sampleResponse);
 
-    const dynamicContentItems = await getJokes({});
+    const dynamicContentItems = await getJokes({ slotData: { jokeTopic: 'cats' } });
 
     expect(dynamicContentItems).toHaveLength(1);
     expect(dynamicContentItems[0].itemType).toEqual("MessageThread");

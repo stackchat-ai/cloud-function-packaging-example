@@ -9,7 +9,7 @@ export async function getJokes(userData: Record<string, any>): Promise<dc.Dynami
   // A text slot named 'jokeTopic' needs to be defined in the dashboard
   // and populated via user input group before reaching this cloud function element
   // in order to have the slot data available.
-  const term = userData.slotData?.jokeTopic || "cats";
+  const term = userData.slotData.jokeTopic || "cats";
 
   const options = {
     uri: `https://icanhazdadjoke.com/search?term=${ term }`,
