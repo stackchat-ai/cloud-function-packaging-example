@@ -7,6 +7,7 @@ const mockedRP = (rp as any) as jest.Mock<typeof rp>;
 
 describe("example cloud function", () => {
   it("should generate a message thread on successful retrieval", async () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore -- even with the typecasting chicanery above this didn't want a value argument
     mockedRP.mockResolvedValue(sampleResponse);
 
